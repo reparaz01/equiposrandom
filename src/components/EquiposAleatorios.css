@@ -1,0 +1,38 @@
+
+.main-container {
+    margin: 30px;
+    background-color: #f0f0f0;
+  }
+  
+  .equipos-aleatorios-container {
+    display: flex;
+  }
+  
+  .tabla-alumnos-container {
+    margin-right: 20px;
+  }
+  
+  .bordered-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .bordered-table th, .bordered-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .alumnos-table {
+    background-color: white;
+  }
+  
+  .equipos-table {
+    background-color: white;
+  }
+  
+  .grilla-equipos-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
