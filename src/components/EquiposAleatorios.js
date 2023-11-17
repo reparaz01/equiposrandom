@@ -45,41 +45,50 @@ class EquiposAleatorios extends Component {
     this.setState({ teams: equipos });
   };
 
+  generarInforme = () => {
+
+  };
+
   render() {
     return (
       <div className="main-container">
-        <div className="equipos-aleatorios-container">
-          <div className="tabla-alumnos-container">
-            <ul className="alumnos-list">
-              {this.state.alumnos.map((alumno, index) => (
-                <li key={index}>{alumno.nombre} {alumno.apellidos}</li>
-              ))}
-            </ul>
-            <button onClick={this.generarEquipos}>Generar Equipos</button>
-          </div>
-          <div className="grilla-equipos-container">
-            <h2>Equipos</h2>
-            <div className="equipos-grid">
-              {this.state.teams.map((equipo, index) => (
-                <div key={index} className="equipo-contenedor">
-                  <h3>Equipo {index + 1}</h3>
-                  <table className="bordered-table equipos-table">
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
+        <div className="tabla-alumnos-container">
+          <h2 margin="20px"> Alumnos 2023</h2>
+          <ul className="alumnos-list">
+            {this.state.alumnos.map((alumno, index) => (
+              <li key={index}>{alumno.nombre} {alumno.apellidos}</li>
+            ))}
+          </ul>
+          <button onClick={this.generarEquipos}>Generar Equipos</button>
+          <br/>
+          <button onClick={this.generarEquipos}> A Jugar</button>
+          <br/>
+          <button onClick={this.generarInforme}> Generar Informe </button>
+          <br/> <br/>
+        </div>
+        <div className="separator"></div>
+        <div className="grilla-equipos-container">
+          <h2>Equipos</h2>
+          <div className="equipos-grid">
+            {this.state.teams.map((equipo, index) => (
+              <div key={index} className="equipo-contenedor">
+                <h3>Equipo {index + 1}</h3>
+                <table className="bordered-table equipos-table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {equipo.map((alumno, alumnoIndex) => (
+                      <tr key={alumnoIndex}>
+                        <td>{alumno.nombre} {alumno.apellidos}</td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {equipo.map((alumno, alumnoIndex) => (
-                        <tr key={alumnoIndex}>
-                          <td>{alumno.nombre} {alumno.apellidos}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ))}
-            </div>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
           </div>
         </div>
       </div>

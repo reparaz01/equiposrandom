@@ -1,10 +1,7 @@
-
 .main-container {
-    margin: 30px;
+    margin: 20px;
     background-color: #f0f0f0;
-  }
-  
-  .equipos-aleatorios-container {
+    border: 1px solid #dddddd;
     display: flex;
   }
   
@@ -12,27 +9,54 @@
     margin-right: 20px;
   }
   
-  .bordered-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .bordered-table th, .bordered-table td {
-    border: 1px solid #dddddd;
+  .alumnos-list {
+    list-style: none;
     padding: 8px;
-    text-align: left;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid #dddddd;
+    max-width: 200px;
+    max-height: 500px;
+    overflow-y: auto;
   }
   
-  .alumnos-table {
-    background-color: white;
-  }
-  
-  .equipos-table {
-    background-color: white;
+  .alumnos-list li {
+    padding: 8px;
+    margin-bottom: -6px;
+    border-bottom: none;
   }
   
   .grilla-equipos-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .equipos-grid {
+    display: flex;
+    justify-content: space-between; /* Añadir espacio entre los dos contenedores hijos */
+  }
+  
+  .equipo-contenedor {
+    margin-right: 10px;
+  }
+  
+  .equipos-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .equipos-table th,
+  .equipos-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .separator {
+    height: 100%;
+    width: 1px;
+    background-color: #dddddd;
+    margin: 0 10px; /* Ajustar el margen del separador */
   }
   
