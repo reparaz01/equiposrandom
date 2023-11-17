@@ -46,7 +46,7 @@ class EquiposAleatorios extends Component {
   };
 
   generarInforme = () => {
-
+    // Implementa la lógica para generar el informe
   };
 
   render() {
@@ -59,16 +59,17 @@ class EquiposAleatorios extends Component {
               <li key={index}>{alumno.nombre} {alumno.apellidos}</li>
             ))}
           </ul>
-          <button onClick={this.generarEquipos}>Generar Equipos</button>
-          <br/>
-          <button onClick={this.generarEquipos}> A Jugar</button>
-          <br/>
-          <button onClick={this.generarInforme}> Generar Informe </button>
-          <br/> <br/>
+          <div className="button-container">
+            <button onClick={this.generarEquipos}>Generar Equipos</button>
+            <button onClick={this.generarEquipos}>A Jugar</button>
+            <button onClick={this.generarInforme}>Generar Informe</button>
+          </div>
         </div>
         <div className="separator"></div>
         <div className="grilla-equipos-container">
-          <h2>Equipos</h2>
+
+          <fieldset>
+          <legend><h2>Equipos</h2></legend>
           <div className="equipos-grid">
             {this.state.teams.map((equipo, index) => (
               <div key={index} className="equipo-contenedor">
@@ -90,6 +91,7 @@ class EquiposAleatorios extends Component {
               </div>
             ))}
           </div>
+          </fieldset>
         </div>
       </div>
     );
@@ -97,3 +99,4 @@ class EquiposAleatorios extends Component {
 }
 
 export default EquiposAleatorios;
+
